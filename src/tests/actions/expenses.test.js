@@ -10,6 +10,8 @@ const createMockStore = configureMockStore([thunk]);
 
 beforeEach((done) => {
     const expensesData = {};
+    //window.jasmine.DEFAULT_TIMEOUT_INTERVAL = 50000;
+
     expenses.forEach(({ id, description, note, amount, createdAt }) => {
         expensesData[id] = { description, note, amount, createdAt };
     });
